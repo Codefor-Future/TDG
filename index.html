@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TDG</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet"> </head>
+<body>
+
+<div class="container-fluid" id="app">
+        <nav class="navbar navbar-expand-sm bg-white navbar-primary" style="position: sticky;top: 0px;z-index: 1;">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#"><img style="border-radius: 5px; width: 100px;" src="https://media-exp1.licdn.com/dms/image/C4D0BAQHqjHF0IUDs-g/company-logo_200_200/0?e=1596672000&v=beta&t=Sin3rOODr26Z0WMLdjYeGnhnaxb4SX7YB-VspIWavPg" alt=""></a>
+            
+            <!-- Links -->
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link 2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link 3</a>
+              </li>
+            </ul>
+          </nav>
+          
+<!-- Scrollable content -->
+<!-- Content start -->
+         <div >
+             <div class="card border-0 back_grad my-3" v-for="i in contents" :key=i.id style="width: 100%;" v-clock>
+                <div class="card-body">
+                    <div class="card-title">
+                        <div>
+                          <img src="profile.jpg" alt="" class="profile mr-3" ></div>
+                          <div>
+                            <a href="#" class="userName">@User id:{{i.id}}</a>
+                          </div>
+                        <div>
+                          <h3 class="text-white header" style="float: left;display: block;">{{i.title}}</h3>
+                        </div>
+                    </div><br><br>
+                    <div class="card-text content">
+                        {{i.body}}
+                    </div>
+                </div>
+                <div class="row ml-4">
+                 <a href="#"><img src="share-square-solid.svg" alt="" class="link"></a> 
+                  <a href="#"><img src="heart.svg" alt="" class="link"><span class="fa fa-heart text-white"></span></a>
+                </div>
+             </div>
+             <button @click="showMore" class="btn btn-block btn-success">show more</button>
+         </div> 
+<!-- Content End -->
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.js" integrity="sha256-bd8XIKzrtyJ1O5Sh3Xp3GiuMIzWC42ZekvrMMD4GxRg=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+<script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

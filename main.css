@@ -1,0 +1,35 @@
+.header{
+    font-family: 'Merriweather', serif !important;
+
+}
+body{
+    background-color: rgb(241, 242, 243) !important;
+}
+.back_grad{
+    background-image: linear-gradient(100deg,rgb(113, 201, 182),rgb(96, 201, 187),rgb(71, 163, 159));
+}
+.content{
+    font-family: 'Varela Round', sans-serif !important;
+    color: rgb(7, 50, 70);
+}
+.link{
+    width: 20px;
+    margin-left:10px ;
+    margin-bottom: 10px;
+    float: right;
+}
+.profile{
+    border-radius: 50%;
+    width: 100px;
+    
+}
+@media only screen and (max-width: 400px){
+    .profile{
+        width: 50px;
+    }
+}
+.userName{
+    text-decoration: none;
+    color: rgb(27, 56, 75);
+    font-size: 13px;
+}
